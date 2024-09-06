@@ -1,95 +1,80 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Portfolio of John Russel Soreda">
+    <meta name="author" content="John Russel Soreda">
+    <title>John Russel Soreda - Portfolio</title>
 
-        <meta name="description" content="">
-        <meta name="author" content="TemplateMo">
+    <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/templatemo-first-portfolio-style.css') }}" rel="stylesheet">
+</head>
 
-        <title>JOHN RUSSEL SOREDA</title>
+<body>
+    @if ($showAlert)
+     <script>
+        alert("Welcome, {{ $username }}!");
+     </script>
+    @endif
 
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+     @if ($username)
+     <h1>Welcome, {{ $username }}!</h1>
+     @else
+     <!-- Ensure nothing is displayed for root if $username is null -->
+     @endif
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- TemplateMo 578 First Portfolio -->
+    <!-- https://templatemo.com/tm-578-first-portfolio -->
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>    
+        </div>
+    </section>
 
-        <link href="css/magnific-popup.css" rel="stylesheet">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
-        
-<!--
+            <a href="index.html" class="navbar-brand mx-auto mx-lg-0">PORTFOLIO</a>
 
-TemplateMo 578 First Portfolio
-
-https://templatemo.com/tm-578-first-portfolio
-
--->
-    </head>
-    
-    <body>
-
-        <section class="preloader">
-            <div class="spinner">
-                <span class="spinner-rotate"></span>    
+            <div class="d-flex align-items-center d-lg-none">
+                <i class="navbar-icon bi-telephone-plus me-3"></i>
+                <a class="custom-btn btn" href="#section_5">+639388657225</a>
             </div>
-        </section>
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_3">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_4">Contact</a>
+                    </li>
+                </ul>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">PORTFOLIO</a>
-
-                <div class="d-flex align-items-center d-lg-none">
+                <div class="d-none d-lg-flex align-items-center ms-auto">
                     <i class="navbar-icon bi-telephone-plus me-3"></i>
-                    <a class="custom-btn btn" href="#section_5">
-                        +639388657225
-                    </a>
+                    <a class="custom-btn btn" href="#section_5">+639388657225</a>
                 </div>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Content</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Projects</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class="d-lg-flex align-items-center d-none ms-auto">
-                        <i class="navbar-icon bi-telephone-plus me-3"></i>
-                        <a class="custom-btn btn" href="#section_5">
-                            +639388657225
-                        </a>
-                    </div>
-                </div>
-
             </div>
-        </nav>
+        </div>
+    </nav>
 
         <main>
 
@@ -100,7 +85,8 @@ https://templatemo.com/tm-578-first-portfolio
                         <div class="col-lg-7 col-12">
                             <div class="hero-text">
                                 <div class="hero-title-wrap d-flex align-items-center mb-4">
-                                    <img src="images/projects/1X1.png" class="avatar-image avatar-image-large img-fluid" alt="">
+                                <img src="{{ asset('images/projects/1X1.png') }}" class="avatar-image avatar-image-large img-fluid" alt="">
+
 
                                     <h1 class="hero-title ms-3 mb-0">Good Day Everyone!</h1>
                                 </div>
@@ -112,7 +98,7 @@ https://templatemo.com/tm-578-first-portfolio
 
                         <div class="col-lg-5 col-12 position-relative">
                             <div class="hero-image-wrap"></div>
-                            <img src="images/projects/pic.png" class="hero-image img-fluid" alt="">
+                            <img src="{{ asset('images/projects/pic.png') }}" class="hero-image img-fluid" alt="">
                         </div>
 
                     </div>
@@ -127,7 +113,7 @@ https://templatemo.com/tm-578-first-portfolio
                     <div class="row">
 
                         <div class="col-lg-6 col-12">
-                            <img src="images/projects/information-technology-.jpg" class="about-image img-fluid" alt="">
+                        <img src="{{ asset('images/projects/information-technology-.jpg') }}" class="about-image img-fluid" alt="">
                         </div>
 
                         <div class="col-lg-6 col-12 mt-5 mt-lg-0">
@@ -136,7 +122,8 @@ https://templatemo.com/tm-578-first-portfolio
                                 <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
                                     <h2 class="text-white me-4 mb-0">My Story</h2>
 
-                                    <img src="images/projects/1X1.png" class="avatar-image img-fluid" alt="">
+                                    <img src="{{ asset('images/projects/1X1.png') }}" class="avatar-image img-fluid" alt="">
+
                                 </div>
 
                                 <h3 class="pt-2 mb-3">Hi I'am Russel! </h3>
@@ -226,25 +213,24 @@ https://templatemo.com/tm-578-first-portfolio
                         <div class="col-lg-12 col-12">
                             <h3 class="text-center mb-5">Education</h3>
                         </div>
-
                         <div class="col-lg-2 col-4 ms-auto clients-item-height">
-                            <img src="images/clients/" class="clients-image img-fluid" alt="">
+                            <img src="{{ asset('images/clients/') }}" class="clients-image img-fluid" alt="">
                         </div>
 
                         <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="images/clients/PCS.jpg" class="clients-image img-fluid" alt="">
+                            <img src="{{ asset('images/clients/PCS.jpg')}}" class="clients-image img-fluid" alt="">
                         </div>
 
                         <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="images/clients/PNCHS.jpg" class="clients-image img-fluid" alt="">
+                            <img src="{{ asset('images/clients/PNCHS.jpg')}}" class="clients-image img-fluid" alt="">
                         </div>
 
                         <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="images/clients/BU.png" class="clients-image img-fluid" alt="">
+                            <img src="{{ asset('images/clients/BU.png')}}" class="clients-image img-fluid" alt="">
                         </div>
 
                         <div class="col-lg-2 col-4 me-auto clients-item-height">
-                            <img src="images/clients/" class="clients-image img-fluid" alt="">
+                            <img src="{{ asset('images/clients/') }}" class="clients-image img-fluid" alt="">
                         </div>
 
                     </div>
@@ -258,7 +244,7 @@ https://templatemo.com/tm-578-first-portfolio
 
                         <div class="col-lg-10 col-12 mx-auto">
                             <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-                                <img src="images/projects/handshake-man-woman-after-signing-business-contract-closeup.jpg" class="avatar-image img-fluid" alt="">
+                            <img src="{{ asset('images/projects/handshake-man-woman-after-signing-business-contract-closeup.jpg') }}" class="avatar-image img-fluid" alt="Handshake Image">
 
                                 <h2 class="text-white ms-4 mb-0">Services</h2>
                             </div>
@@ -353,7 +339,7 @@ https://templatemo.com/tm-578-first-portfolio
 
                         <div class="col-lg-8 col-md-8 col-12 ms-auto">
                             <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                                <img src="images/projects/white-desk-work-study-aesthetics.jpg" class="avatar-image img-fluid" alt="">
+                            <img src="{{ asset('images/projects/white-desk-work-study-aesthetics.jpg') }}" class="avatar-image img-fluid" alt="White Desk Work Study Aesthetics">
 
                                 <h2 class="text-white ms-4 mb-0">Projects</h2>
                             </div>
@@ -370,7 +356,7 @@ https://templatemo.com/tm-578-first-portfolio
                                 </div>
 
                                 <a href="images/projects/map.jpg" class="popup-image">
-                                    <img src="images/projects/map.jpg" class="projects-image img-fluid" alt="">
+                                <img src="{{ asset('images/projects/map.jpg') }}" class="projects-image img-fluid" alt="Map Image">
                                 </a>
                             </div>
                         </div>
@@ -383,7 +369,7 @@ https://templatemo.com/tm-578-first-portfolio
                                     <h3 class="projects-title">Just_Flowers</h3>
                                 </div>
                                 <a href="images/projects/just_flowers.jpg" class="popup-image">
-                                    <img src="images/projects/just_flowers.jpg" class="projects-image img-fluid" alt="">
+                                <img src="{{ asset('images/projects/just_flowers.jpg') }}" class="projects-image img-fluid" alt="Just Flowers">
 
                                 </a>
                             </div>
@@ -398,7 +384,8 @@ https://templatemo.com/tm-578-first-portfolio
                                 </div>
 
                                 <a href="images/projects/website.jpg" class="popup-image">
-                                    <img src="images/projects/website.jpg" class="projects-image img-fluid" alt="">
+                                <img src="{{ asset('images/projects/website.jpg') }}" class="projects-image img-fluid" alt="Website">
+
                                 </a>
                             </div>
                         </div>
@@ -413,7 +400,7 @@ https://templatemo.com/tm-578-first-portfolio
 
                             <div class="col-lg-6 col-md-8 col-12">
                                 <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-                                    <img src="images/projects/aerial-view-man-using-computer-laptop-wooden-table.jpg" class="avatar-image img-fluid" alt="">
+                                <img src="{{ asset('images/projects/aerial-view-man-using-computer-laptop-wooden-table.jpg') }}" class="avatar-image img-fluid" alt="Aerial View of Man Using Computer">
 
                                     <h2 class="text-white ms-4 mb-0">Say Hi</h2>
                                 </div>
@@ -579,13 +566,13 @@ https://templatemo.com/tm-578-first-portfolio
         </footer>
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/magnific-popup-options.js"></script>
-        <script src="js/custom.js"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+    <script src="{{ asset('js/click-scroll.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/magnific-popup-options.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
 
     </body>
 </html>
